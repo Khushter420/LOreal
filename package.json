@@ -1,0 +1,28 @@
+{
+  "name": "loreal-claims-intelligence",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/api",
+    "apps/web"
+  ],
+  "scripts": {
+    "build": "npm run build --workspace @claims/api && npm run build --workspace @claims/web",
+    "typecheck": "npm run typecheck --workspace @claims/api && npm run typecheck --workspace @claims/web",
+    "test": "npm run test --workspace @claims/api && npm run test --workspace @claims/web",
+    "test:api": "npm run test --workspace @claims/api",
+    "test:web": "npm run test --workspace @claims/web",
+    "lint": "npm run lint --workspace @claims/api && npm run lint --workspace @claims/web",
+    "db:generate": "npm run db:generate --workspace @claims/api",
+    "db:migrate": "npm run db:migrate --workspace @claims/api",
+    "dev:api": "npm run start:dev --workspace @claims/api",
+    "dev:web": "npm run dev --workspace @claims/web"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "overrides": {
+    "deepmerge-ts": "^8.0.2",
+    "multer": "^2.5.0"
+  }
+}

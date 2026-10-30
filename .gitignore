@@ -1,0 +1,11 @@
+.env
+.env.*
+!.env.example
+node_modules/
+dist/
+coverage/
+.vite/
+apps/api/src/generated/
+apps/api/data/
+apps/api/prisma/*.db
+apps/api/prisma/*.db-journal
